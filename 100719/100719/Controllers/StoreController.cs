@@ -1,4 +1,5 @@
 ﻿using _100719.DAL;
+using _100719.Models;
 using _100719.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace _100719.Controllers
         }
         public ActionResult Index()
         {
+            //List<Product> products = _context.Products.Include("Category").ToList();
+            //List<Category> categories = _context.Categories.ToList();
 
             ViewStore model = new ViewStore
             {
@@ -26,6 +29,8 @@ namespace _100719.Controllers
                 ProductSectionTitle = "Products",
                 CategorySectionTitle = "Categories"
             };
+
+            
 
             return View(model);
         }
